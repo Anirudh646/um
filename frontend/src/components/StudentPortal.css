@@ -1,0 +1,1577 @@
+.student-portal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.portal-sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+}
+
+.sidebar-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.sidebar-header p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.student-profile {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+}
+
+.profile-id {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.nav-section {
+  margin-bottom: 24px;
+}
+
+.nav-section h4 {
+  margin: 0 0 8px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0b4d2b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #f0f0f0;
+  color: #0b4d2b;
+}
+
+.nav-item.active {
+  background: #e6f5ed;
+  color: #0b4d2b;
+  font-weight: 600;
+  border-left: 3px solid #0b4d2b;
+}
+
+.nav-item span {
+  font-size: 16px;
+}
+
+.logout-btn {
+  margin: 16px 20px;
+  padding: 12px;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.portal-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  max-height: 100vh;
+  max-width: 1200px; /* center the working area */
+  margin: 0 auto;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.header-left h2 {
+  margin: 0 0 4px 0;
+  color: #0b4d2b;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.header-left p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notifications-icon {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-id {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.notifications-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #0b4d2b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.badge {
+  background: #8b5cf6;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notification-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.notification-card h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.notification-greeting {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.notification-message {
+  margin: 8px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.read-more {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.notification-time {
+  margin: 12px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 16px 0;
+  color: #0b4d2b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.timetable-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #0b4d2b;
+  color: #ffffff;
+  border-color: #0b4d2b;
+}
+
+.timetable-content {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+}
+
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.attendance-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attendance-course {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.attendance-percent {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.attendance-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.attendance-progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.academic-details {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.academic-details h3 {
+  margin: 0 0 20px 0;
+  color: #0b4d2b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.course-card:hover {
+  border-color: #0b4d2b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.course-info {
+  flex: 1;
+}
+
+.course-code {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b4d2b;
+}
+
+.course-name {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+}
+
+.instructor-name {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.more-details {
+  color: #0b4d2b;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.more-details:hover {
+  text-decoration: underline;
+}
+
+.courses-content,
+.attendance-content,
+.students-list-content,
+.assignments-content,
+.results-content,
+.profile-content,
+.timetable-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses-content h2,
+.attendance-content h2,
+.assignments-content h2,
+.results-content h2 {
+  margin: 0 0 24px 0;
+  color: #0b4d2b;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* Credits Summary */
+.credits-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card.total {
+  border-color: #0b4d2b;
+  background: linear-gradient(135deg, #f0f9f4 0%, #ffffff 100%);
+}
+
+.summary-card.completed {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+}
+
+.summary-card.remaining {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+}
+
+.summary-card.progress {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+}
+
+.summary-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.credits-value {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  color: #0b4d2b;
+}
+
+.summary-card.completed .credits-value {
+  color: #10b981;
+}
+
+.summary-card.remaining .credits-value {
+  color: #ef4444;
+}
+
+.summary-card.progress .credits-value {
+  color: #3b82f6;
+}
+
+/* Course Detail Card Enhancements */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.course-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #0b4d2b;
+}
+
+.course-code-badge {
+  background: #0b4d2b;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.course-details {
+  margin-bottom: 20px;
+}
+
+.course-details p {
+  margin: 8px 0;
+  color: #666;
+}
+
+/* Credits Section */
+.credits-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.credits-section h4 {
+  margin: 0 0 16px 0;
+  color: #0b4d2b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.credits-breakdown {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.credit-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.credit-value {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0b4d2b;
+}
+
+.credits-progress-bar {
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.credits-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.attendance-table {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.attendance-table th {
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.attendance-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.attendance-table tbody tr:hover {
+  background: #f8f9fa;
+  transform: scale(1.01);
+}
+
+/* Students List Content */
+.students-list-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.students-list-content h2 {
+  color: #0b4d2b;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.students-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.students-table {
+  overflow-x: auto;
+}
+
+.students-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.students-table th {
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.students-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+  background: #f8f9fa;
+  transform: scale(1.01);
+}
+
+/* Profile Content Styles */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-header h2 {
+  color: #0b4d2b;
+  margin: 0;
+  font-size: 28px;
+}
+
+.btn-edit-profile,
+.btn-save-profile,
+.btn-cancel-profile {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-edit-profile {
+  background: #0b4d2b;
+  color: white;
+}
+
+.btn-edit-profile:hover {
+  background: #0a4225;
+}
+
+.btn-save-profile {
+  background: #10b981;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-save-profile:hover {
+  background: #059669;
+}
+
+.btn-cancel-profile {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-cancel-profile:hover {
+  background: #dc2626;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image-section {
+  text-align: center;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-main-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0b4d2b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image-upload {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(11, 77, 43, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.profile-image-upload:hover {
+  background: rgba(11, 77, 43, 1);
+}
+
+.profile-id-badge {
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.profile-right {
+  flex: 1;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+}
+
+.profile-section h3 {
+  color: #0b4d2b;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0b4d2b;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field-full {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.profile-value {
+  color: #666;
+  font-size: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  min-height: 20px;
+}
+
+.profile-input {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.profile-input:focus {
+  outline: none;
+  border-color: #0b4d2b;
+  box-shadow: 0 0 0 3px rgba(11, 77, 43, 0.1);
+}
+
+.profile-input[type="date"] {
+  cursor: pointer;
+}
+
+.profile-input[type="file"] {
+  cursor: pointer;
+}
+
+.profile-input textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+@media (max-width: 968px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image-section {
+    text-align: center;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Timetable Content Styles */
+.timetable-toolbar {
+  display: flex;
+  justify-content: flex-start; /* aligns with table left edge */
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.timetable-header {
+  display: flex;
+  justify-content: flex-end; /* no left title now; keep controls aligned */
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.timetable-header h2 {
+  color: #0b4d2b;
+  margin: 0;
+  font-size: 28px;
+}
+
+.timetable-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.timetable-date-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timetable-date-picker label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.date-selector {
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #111827;
+  min-width: 220px;
+}
+
+.date-selector:focus {
+  outline: none;
+  border-color: #0b4d2b;
+  box-shadow: 0 0 0 3px rgba(11, 77, 43, 0.1);
+}
+
+.timetable-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.timetable-time-range {
+  font-size: 14px;
+  color: #666;
+}
+
+.dashboard-timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.timetable-date-picker-small {
+  display: flex;
+  align-items: center;
+}
+
+.date-selector-small {
+  padding: 6px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.date-selector-small:focus {
+  outline: none;
+  border-color: #0b4d2b;
+  box-shadow: 0 0 0 3px rgba(11, 77, 43, 0.1);
+}
+
+.timetable-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.day-name {
+  font-weight: 700;
+  color: #0b4d2b;
+  font-size: 16px;
+}
+
+.date-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.timetable-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.timetable-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #0b4d2b;
+  transition: all 0.2s ease;
+}
+
+.timetable-item:hover {
+  background: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.timetable-time-badge {
+  min-width: 80px;
+  padding: 6px 10px;
+  background: #0b4d2b;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timetable-class-info {
+  flex: 1;
+}
+
+.timetable-course-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.timetable-course-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.timetable-course-code {
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.timetable-instructor {
+  font-size: 12px;
+  color: #666;
+}
+
+.timetable-room {
+  padding: 3px 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+}
+
+.holiday-preview {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.holiday-icon-small {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.holiday-text-small {
+  font-size: 18px;
+  font-weight: 700;
+  color: #92400e;
+  margin: 8px 0;
+}
+
+.holiday-day-small {
+  font-size: 14px;
+  color: #78350f;
+}
+
+.holiday-message {
+  text-align: center;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 16px;
+  border: 2px solid #fbbf24;
+}
+
+.holiday-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.holiday-message h2 {
+  color: #92400e;
+  font-size: 36px;
+  margin: 0 0 12px 0;
+}
+
+.holiday-message p {
+  color: #78350f;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.holiday-text {
+  font-size: 16px;
+  color: #92400e;
+  margin-top: 16px;
+}
+
+.timetable-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.timetable-table-wrapper {
+  flex: 1 1 0;
+  min-width: 0; /* allow shrinking inside flex so it doesn't push into legend */
+  overflow-x: auto;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed; /* ensures consistent column widths and alignment */
+}
+
+.timetable-table thead {
+  background: linear-gradient(135deg, #0b4d2b 0%, #0a4225 100%);
+  color: white;
+}
+
+.timetable-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.timetable-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix column alignment and widths */
+.timetable-table th:nth-child(1),
+.timetable-table td:nth-child(1) { /* Time */
+  width: 140px;
+  white-space: nowrap;
+}
+
+.timetable-table th:nth-child(3),
+.timetable-table td:nth-child(3) { /* Course Code */
+  width: 140px;
+  white-space: nowrap;
+}
+
+.timetable-table th:nth-child(5),
+.timetable-table td:nth-child(5) { /* Room */
+  width: 110px;
+  white-space: nowrap;
+}
+
+/* Let Subject column wrap while others remain single-line */
+.timetable-table th:nth-child(2),
+.timetable-table td:nth-child(2) {
+  white-space: normal;
+}
+
+/* Keep Instructor single-line but truncate if narrow */
+.timetable-table th:nth-child(4),
+.timetable-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+/* Keep cells vertically centered for cleaner alignment */
+.timetable-table th,
+.timetable-table td {
+  vertical-align: middle;
+}
+
+.timetable-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.timetable-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.time-cell {
+  font-weight: 600;
+  color: #0b4d2b;
+  width: 140px;
+}
+
+.gap-label {
+  display: block;
+  font-size: 11px;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.class-cell {
+  background: #f8f9fa;
+}
+
+.empty-cell {
+  background: #ffffff;
+  color: #999;
+  font-style: italic;
+}
+
+.empty-text {
+  color: #d1d5db;
+}
+
+.gap-period {
+  background: #fff7ed !important;
+}
+
+.gap-period td {
+  border-left: 3px solid #f59e0b;
+}
+
+.class-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.timetable-table .course-code-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.instructor-name {
+  color: #666;
+  font-size: 14px;
+}
+
+.room-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #333;
+}
+
+.timetable-legend {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  min-width: 300px;
+  flex: 0 0 320px; /* prevent legend from shrinking into the table area */
+}
+
+.timetable-legend h3 {
+  color: #0b4d2b;
+  margin: 0 0 16px 0;
+  font-size: 18px;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-item span {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+@media (max-width: 968px) {
+  .timetable-container {
+    flex-direction: column;
+  }
+
+  .timetable-legend {
+    min-width: 100%;
+  }
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge.good {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.status-badge.warning {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.assignments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.assignment-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.assignment-card h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.assignment-card p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.assignment-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.assignment-status.pending {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.assignment-status.in-progress {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.assignment-status.submitted {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.results-message {
+  text-align: center;
+  padding: 40px;
+}
+
+.results-message p {
+  margin: 8px 0;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-portal {
+    flex-direction: column;
+  }
+  
+  .portal-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
